@@ -1,0 +1,27 @@
+name: Drift report
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  drift:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v7
+      - uses: actions/setup-python@v7
+        with:
+          python-version: "3.13"
+      - name: Install dependencies
+        run: pip install -r requirements.txt -r requirements-drift.txt
+      - name: Generate drift report
+        run: python -m scripts.drift_report
+      - name: Upload report
+        if: always()
+        uses: actions/upload-artifact@v7
+        with:
+          name: drift-report
+          path: reports/
+          retention-days: 14
