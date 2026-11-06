@@ -1,0 +1,62 @@
+{
+  "artifact_name": "credit-default-lgbm-small",
+  "artifact_version": "v0",
+  "model_sha256": "5acd9c73d31ab3cb7180763533d5c3b5c24812358906e7798c874ae27f4be109",
+  "python_version": "3.13.18",
+  "numpy_version": "2.4.6",
+  "scipy_version": "1.16.3",
+  "joblib_version": "1.6.0",
+  "colab_sklearn_version": "1.6.1",
+  "dataset": "uci-350",
+  "features": [
+    "LIMIT_BAL",
+    "PAY_0",
+    "PAY_2",
+    "PAY_3",
+    "PAY_4",
+    "PAY_5",
+    "PAY_6",
+    "BILL_AMT1",
+    "BILL_AMT2",
+    "BILL_AMT3",
+    "BILL_AMT4",
+    "BILL_AMT5",
+    "BILL_AMT6",
+    "PAY_AMT1",
+    "PAY_AMT2",
+    "PAY_AMT3",
+    "PAY_AMT4",
+    "PAY_AMT5",
+    "PAY_AMT6"
+  ],
+  "model_name": "LGBMClassifier",
+  "test_brier": 0.13534829175167287,
+  "calibration": "none",
+  "cost_ratios": {
+    "low": 3,
+    "base": 5,
+    "high": 10
+  },
+  "test_pr_auc": 0.5541419680116967,
+  "model_params": {
+    "n_jobs": -1,
+    "verbose": -1,
+    "subsample": 0.8,
+    "num_leaves": 7,
+    "n_estimators": 200,
+    "random_state": 42,
+    "learning_rate": 0.05,
+    "subsample_freq": 1,
+    "colsample_bytree": 0.8,
+    "min_child_samples": 50
+  },
+  "test_roc_auc": 0.7783245023319358,
+  "sklearn_version": "1.6.1",
+  "lightgbm_version": "4.6.0",
+  "primary_threshold": 0.17,
+  "selected_thresholds": {
+    "low": 0.27,
+    "base": 0.17,
+    "high": 0.09
+  }
+}
