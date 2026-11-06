@@ -1,0 +1,233 @@
+{
+  "test_pr_auc": 0.5541419680116967,
+  "control": {
+    "reference_rows": 3000,
+    "current_rows": 3000,
+    "drifted_columns": 0,
+    "total_columns": 20,
+    "drifted_share": 0.0,
+    "dataset_drift": false,
+    "prediction_drift": {
+      "method": "Wasserstein distance (normed)",
+      "score": 0.061842305775667114,
+      "threshold": 0.1
+    },
+    "columns": {
+      "LIMIT_BAL": {
+        "method": "Wasserstein distance (normed)",
+        "score": 0.018376115043464668,
+        "threshold": 0.1
+      },
+      "PAY_0": {
+        "method": "Wasserstein distance (normed)",
+        "score": 0.043834968170253834,
+        "threshold": 0.1
+      },
+      "PAY_2": {
+        "method": "Wasserstein distance (normed)",
+        "score": 0.04722809129151316,
+        "threshold": 0.1
+      },
+      "PAY_3": {
+        "method": "Wasserstein distance (normed)",
+        "score": 0.03453645235343219,
+        "threshold": 0.1
+      },
+      "PAY_4": {
+        "method": "Wasserstein distance (normed)",
+        "score": 0.041658341269856916,
+        "threshold": 0.1
+      },
+      "PAY_5": {
+        "method": "Wasserstein distance (normed)",
+        "score": 0.06417364022712163,
+        "threshold": 0.1
+      },
+      "PAY_6": {
+        "method": "Wasserstein distance (normed)",
+        "score": 0.05601043931297807,
+        "threshold": 0.1
+      },
+      "BILL_AMT1": {
+        "method": "Wasserstein distance (normed)",
+        "score": 0.020122348305526238,
+        "threshold": 0.1
+      },
+      "BILL_AMT2": {
+        "method": "Wasserstein distance (normed)",
+        "score": 0.01812176739616081,
+        "threshold": 0.1
+      },
+      "BILL_AMT3": {
+        "method": "Wasserstein distance (normed)",
+        "score": 0.021063892836079286,
+        "threshold": 0.1
+      },
+      "BILL_AMT4": {
+        "method": "Wasserstein distance (normed)",
+        "score": 0.01790221273945893,
+        "threshold": 0.1
+      },
+      "BILL_AMT5": {
+        "method": "Wasserstein distance (normed)",
+        "score": 0.015545653517708584,
+        "threshold": 0.1
+      },
+      "BILL_AMT6": {
+        "method": "Wasserstein distance (normed)",
+        "score": 0.01620340823764537,
+        "threshold": 0.1
+      },
+      "PAY_AMT1": {
+        "method": "Wasserstein distance (normed)",
+        "score": 0.03497701526034947,
+        "threshold": 0.1
+      },
+      "PAY_AMT2": {
+        "method": "Wasserstein distance (normed)",
+        "score": 0.07184724370971891,
+        "threshold": 0.1
+      },
+      "PAY_AMT3": {
+        "method": "Wasserstein distance (normed)",
+        "score": 0.07114461005122887,
+        "threshold": 0.1
+      },
+      "PAY_AMT4": {
+        "method": "Wasserstein distance (normed)",
+        "score": 0.03235092529142623,
+        "threshold": 0.1
+      },
+      "PAY_AMT5": {
+        "method": "Wasserstein distance (normed)",
+        "score": 0.04224600556364572,
+        "threshold": 0.1
+      },
+      "PAY_AMT6": {
+        "method": "Wasserstein distance (normed)",
+        "score": 0.028448962329505112,
+        "threshold": 0.1
+      },
+      "predicted_probability": {
+        "method": "Wasserstein distance (normed)",
+        "score": 0.061842305775667114,
+        "threshold": 0.1
+      }
+    }
+  },
+  "shifted": {
+    "reference_rows": 6000,
+    "current_rows": 6000,
+    "drifted_columns": 19,
+    "total_columns": 20,
+    "drifted_share": 0.95,
+    "dataset_drift": true,
+    "prediction_drift": {
+      "method": "Wasserstein distance (normed)",
+      "score": 1.1417285660619405,
+      "threshold": 0.1
+    },
+    "columns": {
+      "LIMIT_BAL": {
+        "method": "Wasserstein distance (normed)",
+        "score": 0.25704487202351384,
+        "threshold": 0.1
+      },
+      "PAY_0": {
+        "method": "Wasserstein distance (normed)",
+        "score": 0.8878444919305405,
+        "threshold": 0.1
+      },
+      "PAY_2": {
+        "method": "Wasserstein distance (normed)",
+        "score": 0.8398883400681261,
+        "threshold": 0.1
+      },
+      "PAY_3": {
+        "method": "Wasserstein distance (normed)",
+        "score": 0.8280818258142656,
+        "threshold": 0.1
+      },
+      "PAY_4": {
+        "method": "Wasserstein distance (normed)",
+        "score": 0.8350333515780038,
+        "threshold": 0.1
+      },
+      "PAY_5": {
+        "method": "Wasserstein distance (normed)",
+        "score": 0.8587567683993225,
+        "threshold": 0.1
+      },
+      "PAY_6": {
+        "method": "Wasserstein distance (normed)",
+        "score": 0.8562717292304907,
+        "threshold": 0.1
+      },
+      "BILL_AMT1": {
+        "method": "Wasserstein distance (normed)",
+        "score": 0.20939150960906905,
+        "threshold": 0.1
+      },
+      "BILL_AMT2": {
+        "method": "Wasserstein distance (normed)",
+        "score": 0.20650345140362575,
+        "threshold": 0.1
+      },
+      "BILL_AMT3": {
+        "method": "Wasserstein distance (normed)",
+        "score": 0.1960961881101805,
+        "threshold": 0.1
+      },
+      "BILL_AMT4": {
+        "method": "Wasserstein distance (normed)",
+        "score": 0.20084838869252364,
+        "threshold": 0.1
+      },
+      "BILL_AMT5": {
+        "method": "Wasserstein distance (normed)",
+        "score": 0.1999479400470952,
+        "threshold": 0.1
+      },
+      "BILL_AMT6": {
+        "method": "Wasserstein distance (normed)",
+        "score": 0.19727276154680223,
+        "threshold": 0.1
+      },
+      "PAY_AMT1": {
+        "method": "Wasserstein distance (normed)",
+        "score": 0.16063145147991792,
+        "threshold": 0.1
+      },
+      "PAY_AMT2": {
+        "method": "Wasserstein distance (normed)",
+        "score": 0.0955780683981696,
+        "threshold": 0.1
+      },
+      "PAY_AMT3": {
+        "method": "Wasserstein distance (normed)",
+        "score": 0.14645624200725713,
+        "threshold": 0.1
+      },
+      "PAY_AMT4": {
+        "method": "Wasserstein distance (normed)",
+        "score": 0.13892927303047115,
+        "threshold": 0.1
+      },
+      "PAY_AMT5": {
+        "method": "Wasserstein distance (normed)",
+        "score": 0.15209850869932506,
+        "threshold": 0.1
+      },
+      "PAY_AMT6": {
+        "method": "Wasserstein distance (normed)",
+        "score": 0.14751332141188267,
+        "threshold": 0.1
+      },
+      "predicted_probability": {
+        "method": "Wasserstein distance (normed)",
+        "score": 1.1417285660619405,
+        "threshold": 0.1
+      }
+    }
+  }
+}

@@ -47,6 +47,8 @@ Both scenarios use a fixed test split. The test PR-AUC reproduced the recorded v
 
 The prediction drift score uses normalized Wasserstein distance with a threshold of 0.1. Dataset drift is flagged when at least 50% of columns drift.
 
+Scores for every column are available in [docs/drift_summary.json](docs/drift_summary.json).
+
 The shifted scenario applies these deliberate changes:
 
 - `LIMIT_BAL` multiplied by 0.8
