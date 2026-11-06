@@ -15,7 +15,7 @@ def request(path: str, payload: dict | None = None) -> tuple[int, dict]:
     req = urllib.request.Request(
         BASE_URL + path,
         data=data,
-        headers={"content-type": "application/json"},
+        headers={"content-type": "application/json", "user-agent": "credit-default-smoke-test"},
     )
     try:
         with urllib.request.urlopen(req, timeout=10) as response:

@@ -14,7 +14,7 @@ The focus is operational engineering, not improving the model. This is a learnin
 - Input validation and model integrity checks
 - Automated tests and CI with GitHub Actions
 - A Docker image published to GitHub Container Registry (GHCR)
-- A public demo on Hugging Face Spaces
+- A public demo on Render
 - An Evidently drift report using held-out and artificially shifted data
 - English documentation in a new public repository
 
@@ -36,7 +36,7 @@ The focus is operational engineering, not improving the model. This is a learnin
 | Tests | pytest, FastAPI TestClient |
 | Container | Docker |
 | CI/CD | GitHub Actions, GHCR |
-| Deployment | Hugging Face Spaces (Docker) |
+| Deployment | Render Free web service |
 | Drift check | Evidently, `ucimlrepo` |
 
 Current free-tier limits and platform terms must be checked against official documentation before deployment.
@@ -100,9 +100,10 @@ The model is trained on Default of Credit Card Clients (Yeh, 2009, https://doi.o
 
 ## 7. Deployment
 
-- Deploy the Docker app to a public Hugging Face Space.
-- Keep the repository, image, and Space on the same model version.
-- Store no secrets in the image or repository.
+- Deploy the published GHCR image to a Render Free web service, pinned by digest.
+- If the Free plan cannot use the image, build from the same Dockerfile and rerun the smoke test.
+- Keep the repository, image, and service on the same model version.
+- Store no secrets in the image, repository, or service settings.
 
 ## 8. Drift check
 
@@ -132,7 +133,7 @@ The report covers input features and predicted probabilities. Actual outcomes ar
 | 5. Container | Create and verify the Docker image | Dockerfile, image |
 | 6. CI | Add test, build, and smoke-test automation | CI workflow |
 | 7. CD | Publish images to GHCR | Published image |
-| 8. Deployment | Deploy to Hugging Face Spaces | Public demo |
+| 8. Deployment | Deploy to Render | Public demo |
 | 9. Drift check | Add the report and workflow | Drift report |
 | 10. Reporting | Record results and limitations | `README.md`, `results.md` |
 | 11. Publishing | Run final checks and publish | Public repository |
@@ -166,6 +167,7 @@ The report covers input features and predicted probabilities. Actual outcomes ar
 
 - The model and its limitations are inherited from `credit-default-threshold`, including the assumed cost ratio.
 - Without authentication or rate limiting, the public service is suitable only as a demo.
-- Free hosting may sleep, restart, or impose resource limits, so availability is not guaranteed.
+- Render Free services spin down after 15 minutes without traffic and take about a minute to wake, so availability is not guaranteed.
+- Hugging Face Docker Spaces were not used because they now require paid billing.
 - A deliberately shifted dataset demonstrates the mechanism but does not represent real production drift.
 - This project does not satisfy legal, regulatory, or model-risk requirements for real credit decisions.
